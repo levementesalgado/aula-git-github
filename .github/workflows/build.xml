@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="aula-git-github" default="build" basedir=".">
+
+    <description>
+        Build simples dos exemplos de Java da aula de git/github.
+    </description>
+
+    <!-- ═══ Propriedades ═══ -->
+    <property name="src.dir"     value="." />
+    <property name="build.dir"   value="build" />
+    <property name="classes.dir" value="${build.dir}/classes" />
+
+    <!-- ═══ Limpeza ═══ -->
+    <target name="clean" description="Remove artefatos de build">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <!-- ═══ Compilação ═══ -->
+    <target name="build" depends="clean" description="Compila os .java">
+        <mkdir dir="${classes.dir}" />
+        <javac srcdir="${src.dir}"
+               destdir="${classes.dir}"
+               includeantruntime="false"
+               encoding="UTF-8"
+               release="17">
+            <include name="**/*.java" />
+            <exclude name="build/**" />
+        </javac>
+    </target>
+
+    <!-- ═══ Execução ═══ -->
+    <target name="run" depends="build" description="Executa o OlaGithub">
+        <java classname="OlaGithub" fork="true" dir="${classes.dir}">
+            <classpath>
+                <pathelement location="${classes.dir}" />
+            </classpath>
+        </java>
+    </target>
+
+    <!-- ═══ Teste rápido (smoke test do CI) ═══ -->
+    <target name="test" depends="build" description="Smoke test">
+        <java classname="OlaGithub" fork="true" failonerror="true"
+              dir="${classes.dir}" outputproperty="ola.output">
+            <classpath>
+                <pathelement location="${classes.dir}" />
+            </classpath>
+        </java>
+        <condition property="ola.ok">
+            <contains string="${ola.output}" substring="GitHub" />
+        </condition>
+        <fail unless="ola.ok" message="OlaGithub não imprimiu 'GitHub'" />
+        <echo message="✓ smoke test passou" />
+    </target>
+
+</project>
