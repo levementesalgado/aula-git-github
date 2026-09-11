@@ -27,7 +27,6 @@ jobs:
           output=$(java OlaGithub)
           echo "$output"
           echo "$output" | grep -q "GitHub"
-          echo "✓ smoke test passou"
 
       - name: Rodar Hipercubo8D
         run: java Hipercubo8D
