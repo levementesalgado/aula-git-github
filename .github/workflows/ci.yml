@@ -19,14 +19,5 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Compilar
-        run: javac OlaGithub.java Hipercubo8D.java
-
-      - name: Rodar OlaGithub
-        run: |
-          output=$(java OlaGithub)
-          echo "$output"
-          echo "$output" | grep -q "GitHub"
-
-      - name: Rodar Hipercubo8D
-        run: java Hipercubo8D
+      - name: Build com Ant
+        run: ant -noinput -buildfile build.xml
