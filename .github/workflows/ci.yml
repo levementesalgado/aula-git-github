@@ -3,8 +3,6 @@ name: CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -19,5 +17,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build com Ant
-        run: ant -noinput -buildfile build.xml
+      - name: Compilar
+        run: javac OlaGithub.java Hipercubo8D.java
+
+      - name: Rodar
+        run: java OlaGithub
