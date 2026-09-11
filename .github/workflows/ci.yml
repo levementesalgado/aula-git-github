@@ -1,4 +1,3 @@
-# .github/workflows/ci.yml
 name: CI
 
 on:
@@ -23,8 +22,12 @@ jobs:
       - name: Compilar
         run: javac OlaGithub.java Hipercubo8D.java
 
-      - name: Smoke test
+      - name: Rodar OlaGithub
         run: |
           output=$(java OlaGithub)
           echo "$output"
           echo "$output" | grep -q "GitHub"
+          echo "✓ smoke test passou"
+
+      - name: Rodar Hipercubo8D
+        run: java Hipercubo8D
