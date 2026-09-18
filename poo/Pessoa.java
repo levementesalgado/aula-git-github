@@ -26,6 +26,8 @@ public class Pessoa {
 	int idade;
 	String endereco;
 	String proficao;
+	String cpf;
+	String rg;
 
 	public String getNome() {
 		return nome;
@@ -57,5 +59,21 @@ public class Pessoa {
 
 	public void setProficao(String proficao) {
 		this.proficao = proficao;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
 	}
 }
