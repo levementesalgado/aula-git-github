@@ -1,96 +1,125 @@
 # Exercícios pendentes
 
 Levantamento do que **ainda não tem código** no repositório, extraído das
-listas de exercício e do simulado da AV1 que estão no Classroom.
+listas de exercício, dos slides das aulas e do simulado da AV1 que estão no
+Classroom.
 
-Data de referência: 03/10/2026.
+**Base:** `~/logica-programacao/notas/` (texto extraído dos PDFs) e
+`~/logica-programacao/pdfs/` (originais).
+**Data de referência:** 03/10/2026.
+
+## Como funciona a entrega
+
+É **código**. Pode ir pelo GitHub mesmo — não existe regra de PDF, nem
+obrigatoriedade de teste de mesa. O que o professor pede em slide é "entregar
+os códigos", e o resto é com você.
+
+Higiene de dados do repo: **cada commit é datado na data da aula** em que o
+exercício foi aplicado (`git commit --date`), usando a data de criação do PDF
+da aula (sempre quinta, na hora da aula). Assim o histórico no GitHub fica na
+mesma ordem que as aulas.
 
 ## O que já está feito
 
-| Tema | Onde |
-|---|---|
-| Conceitos iniciais, hello world | `exemplos/ola-mundo/` |
-| Entrada e saída (`Scanner`) | `exemplos/entrada-saida/` |
-| Matrizes 3x3, 5x5, 8x8, aleatória | `matrizes/` |
-| POO: classe, getters/setters, interface | `poo/` |
-| Estrutura de repetição: `while`, `do while` | `repeticao/` |
-| Vetores: `int[]`, `String[]` | `vetores/` |
-| Git e GitHub | `README.md` |
+| Tema | Onde | Aula |
+|---|---|---|
+| Conceitos iniciais, hello world | `exemplos/ola-mundo/` | 01–03 |
+| Entrada e saída (`Scanner`), 4 operações | `exemplos/entrada-saida/` | 02–03, 08 |
+| Estrutura de decisão — lista FPOO (10) | `decisao/` | 06–10 |
+| `switch case` e operador ternário | `decisao/MesSwitch.java`, `decisao/BonusSalarial.java` | 11 |
+| Repetição: `for`, `while`, `do while` | `repeticao/` | 11–12 |
+| Pares e ímpares com os 3 laços | `repeticao/ParesImpares*.java` | 11–12 |
+| Vetores: 5 nomes, soma > 15, junção A+B | `vetores/` | 13 |
+| Matrizes 3x3, 5x5, 8x8, aleatória | `matrizes/` | *(extra)* |
+| POO: classe, getters/setters, interface | `poo/` | 16–17 (parcial) |
+| Simulado AV1 — os 4 desafios | `av1/` | AV1 |
+| Git e GitHub | `README.md` | 15 |
 
 ## O que falta
 
-### 1. Teste de mesa (Aula 04) — **não tem nada**
+### 1. POO — o que sobrou das Aulas 16 e 17
 
-O simulado da AV1 cobra isso em 3 dos 4 desafios ("Teste de mesa" aparece
-explicitamente). Não é código: é a tabela manual de entrada → linha executada
-→ saída. Precisa montar pelo menos um modelo no repo pra servir de padrão.
+| Onde | Pendência |
+|---|---|
+| Aula 16 (p. 27) | `Pessoa`: adicionar **CPF e RG** (com getter/setter) — o repo tem só 4 atributos |
+| Aula 16 (p. 28–39) | Classes `Carro`, `Avião`, `Animal` + as classes dos diagramas das imagens |
+| Aula 17 (p. 32–35) | 3 exercícios de **interface** a partir de diagrama (o repo tem `Animal`/`Lobo`, mas `Lobo` está vazio e não implementa a interface) |
+| Aula 17 (p. 49) | Transformar `Animal` em **classe abstrata** e fazer getters/setters |
+| Aula 17 (p. 61) | 2 exercícios de **`enum`**: 7 marcas de roupa e 10 marcas de carro |
 
-### 2. Estrutura de decisão (Aulas 06 a 10) — o buraco maior
+`poo/` tem interface, mas nada de `abstract`, nada de herança, nada de `enum`.
 
-A lista "FPOO Estrutura de decisão" tem **10 exercícios** e o repo só tem
-`SomaVetor.java` usando um `if` solto. Falta:
+### 2. Atividades Aulas 04/05 — fluxograma e Portugol
 
-| # | Enunciado (resumido) | Construtor |
-|---|---|---|
-| 01 | login e senha, "Bem-vindo ao Sistema Senai" | `if`/`else` |
-| 02 | mês informado → nome do mês, ou "Mês Inválido" | `switch` |
-| 03 | inteiro negativo → mensagem de erro | `if` simples |
-| 04 | 3 reais, mostra soma só se passar de 80 | `if`/`else` |
-| 05 | turno M/V/N → Bom Dia / Boa Tarde / Boa Noite | `if`/`else` |
-| 06 | 3 números → maior deles | `if`/`else` |
-| 07 | letra F/M → Feminino / Masculino | `if`/`else` |
-| 08 | 5 notas, média 6 → Aprovado / Reprovado | `if`/`else` |
-| 09 | 3 lados → Equilátero / Isósceles / Escaleno | `if`/`else` |
-| 10 | calculadora com operador `+ * - /` | `switch` |
+Aula 04 traz a lista em fluxograma; a Aula 05 repete a mesma lista pedindo
+**FLUXOGRAMA e PORTUGOL**. Não é Java, por isso não virou código aqui — se o
+professor aceitar Portugol no repo, dá pra fazer (Portugol Studio roda offline
+ou na versão web).
 
-**Faltam também** ternário e `switch case`, que têm aula própria (Aula 11) e
-não aparecem na lista mas caem na AV1.
+"Para entregar" — p. 33–34 da Aula 04 / p. 43–44 da Aula 05:
 
-### 3. Desafios do simulado da AV1
+1. Soma de 4 números lidos
+2. Dois reais A e B → as 4 operações aritméticas
+3. Base e altura → área do triângulo `(base * altura) / 2`
+4. Fatorial do valor 5
 
-- **Desafio 1** — converter algoritmo (Portugol) para Java, com teste de mesa
-- **Desafio 2** — calcular a área de um objeto
-- **Desafio 3** — dia da semana, `switch case` (1 = domingo … 7 = sábado)
-- **Desafio 4** — ler 15 números e somar
+Algoritmos avulsos (mesmas páginas):
 
-### 4. Vetores — parcial
+5. Ler inteiro → exibir o dobro
+6. Três notas → média aritmética
+7. Salário + 15% de aumento
+8. Celsius → Fahrenheit
+9. Horas → minutos e segundos
+10. Carro 12 km/l → litros de uma viagem
+11. Conta de pizzaria dividida por 3
+12. Trocar os valores de A e B entre si e exibir
 
-Tem leitura e soma. Faltam os clássicos que o professor sempre pede: maior e
-menor valor, ordenar, inverter, busca, matriz como tabuleiro.
+Obs.: o Desafio 1 da AV1 é exatamente o exercício 2 (as 4 operações) — já está
+em `av1/Desafio1Operacoes.java`, e o exercício 3 em `av1/Desafio2AreaTriangulo.java`.
 
-### 5. Tópicos nem tocados
+### 3. Tópicos e entregas que não são código
 
 - **Portugol Studio** (Aula 05) — o curso começa aqui, antes de Java
-- **Classe abstrata e interface** (Aula 17) — `poo/` tem interface, mas nada
-  abstrato, nada de `abstract`, nada de herança
+- **Atividade Hackathon** — 100 pts,
+  <https://www.even3.com.br/hackathontvbox-unesp/>
+- **Instalação Java e IDE Eclipse** — 100 pts (Notion do professor)
+- **Pesquisa de satisfação** — link solto no Classroom
+- **Relatório de testes do Sistema de ACC** — prazo 16/05, 100 pts
 
-## Como atacar
+## Prazos publicados no Classroom
 
-Sugestão de ordem, do que mais cai na prova pro menos:
+| Atividade | Prazo | Fonte |
+|---|---|---|
+| Estrutura de decisão (Aula 07) | 2026-04-10 | `notas/aula-07---estrutura-de-decis-o.md` |
+| Relatório de testes do ACC | 2026-05-16 | `notas/relat-rio-de-testes-do-sistema-de-acc.md` |
+| Simulação prática avaliativa (AV1) | 2026-05-22 | `notas/aula---simula-o-pr-tica---avaliativa.md` |
+| Git e GitHub | 2026-09-18 | `notas/aula-15---git-github.md` |
+| Introdução a POO | 2026-09-25 | `notas/aula-16---introdu-o-poo.md` |
+| Aulas 04, 05, 06, 08–13, 17, Hackathon, ACC, Eclipse | **sem prazo publicado** | notas trazem só "Pontos: 100" |
 
-1. `switch case` e ternário (Aula 11) — é o Desafio 3 da AV1 inteira
-2. Os 10 de estrutura de decisão, começando pelo 10 (calculadora), que é o que
-   mais força o uso de `switch`
-3. Os 4 desafios da AV1, que recycle tudo acima
-4. Teste de mesa — pelo menos um exemplo modelado por extenso
-5. Herança e classe abstrata, quando chegar
+Todos os prazos acima já passaram (hoje é 03/10/2026). Verifica no Classroom se
+a professor reabriu alguma entrega ou postou prazo novo antes de usar essa
+lista como referência.
 
-## Detalhe que o professor cobra sempre
+## Datas das aulas (usadas nos commits)
 
-O "Teste de mesa" aparece citado em quase todo enunciado. É a tabela de
-simulação passo a passo, e ele espera ver a coluna de saída. Não é código, é
-prova de que você simulou mentalmente antes de escrever.
+Tiradas do `CreationDate` dos PDFs — todas quintas-feiras, hora da aula:
 
-## Prazo
-
-| Atividade | Entrega |
+| Aula | Data |
 |---|---|
-| Estrutura de decisão (Aulas 06/07) | 10/04 |
-| Atividades aula 06 | 10/04 |
-| Simulação prática avaliativa (AV1) | 22/05 |
-| Relatório de testes do ACC | 16/05 |
-| Introdução POO | 25/09 |
-| Git e GitHub | 18/09 |
-
-Duas dessas já passaram. Verifica no Classroom se a professor abriu alguma
-entrega nova antes de usar essa lista como referência.
+| 01–03 apresentação | 2026-02-19 |
+| 04 teste de mesa | 2026-03-12 (PDF 13/03) |
+| 05 Portugol Studio | 2026-03-19 |
+| 06 estrutura de decisão | 2026-03-26 (PDF 27/03) |
+| 07 estrutura de decisão | 2026-04-09 |
+| 08 de algoritmo para Java | 2026-04-16 |
+| 09 estrutura de decisão Java | 2026-04-23 |
+| 10 lista FPOO | 2026-04-30 |
+| 11 ternário e switch case | 2026-05-07 |
+| AV1 (simulação avaliativa) | 2026-05-21 |
+| 11 estrutura de repetição | 2026-08-13 |
+| 12 repetição parte 2 | 2026-08-20 |
+| 13 vetores | 2026-08-27 |
+| 15 Git e GitHub | 2026-09-10 |
+| 16 Introdução a POO | 2026-09-17 |
+| 17 Classe abstrata e interface | 2026-10-01 |

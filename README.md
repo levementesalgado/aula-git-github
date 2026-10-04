@@ -26,6 +26,53 @@ além do `java.util.Scanner`.
 | `rascunho/Teste.java` | Hello World com uma piada no `println` |
 | `rascunho/Teste2.java` | Idem, segundo rascunho |
 
+### Estrutura de decisão (Aulas 06 a 11)
+
+Lista FPOO de estrutura de decisão + `switch case` e ternário da Aula 11.
+
+| Arquivo | Exercício |
+|---|---|
+| `decisao/LoginSenha.java` | 01 — login e senha → "Bem-vindo ao Sistema Senai" |
+| `decisao/Mes.java` | 02 — número do mês → nome do mês, ou "Mês Inválido" |
+| `decisao/NumeroNegativo.java` | 03 — inteiro negativo → mensagem de erro |
+| `decisao/SomaOitenta.java` | 04 — 3 reais, soma só se passar de 80 |
+| `decisao/Turno.java` | 05 — turno M/V/N → Bom Dia / Boa Tarde / Boa Noite |
+| `decisao/MaiorNumero.java` | 06 — 3 números → maior deles |
+| `decisao/LetraSexo.java` | 07 — letra F/M → Feminino / Masculino |
+| `decisao/MediaNotas.java` | 08 — 5 notas, média 6 → Aprovado / Reprovado |
+| `decisao/Triangulo.java` | 09 — 3 lados → Equilátero / Isósceles / Escaleno |
+| `decisao/Calculadora.java` | 10 — calculadora com operador `+ - * /` (`switch`) |
+| `decisao/MesSwitch.java` | Exercício 02 convertido para `switch case` |
+| `decisao/BonusSalarial.java` | Bônus de salário com `if/else`, `switch` e ternário |
+
+### Estrutura de repetição (Aulas 11 e 12)
+
+| Arquivo | Descrição |
+|---|---|
+| `repeticao/for1.java` | Soma e média de 5 números com `for` |
+| `repeticao/while1.java` | Idem com `while` |
+| `repeticao/dowhile1.java` | Idem com `do while` |
+| `repeticao/ParesImparesFor.java` | 10 inteiros → soma, pares e ímpares com `for` |
+| `repeticao/ParesImparesWhile.java` | Idem com `while` |
+| `repeticao/ParesImparesDoWhile.java` | Idem com `do while` |
+
+### Vetores (Aula 13)
+
+| Arquivo | Atividade |
+|---|---|
+| `vetores/AtividadeVetor.java` | 1 — 5 nomes em um vetor e apresentação |
+| `vetores/SomaVetor.java` | 2 — 5 inteiros, soma dos elementos se maior que 15 |
+| `vetores/VetorJuncao.java` | 3 — vetores A e B juntados no vetor C |
+
+### Simulado da AV1
+
+| Arquivo | Desafio |
+|---|---|
+| `av1/Desafio1Operacoes.java` | 1 — converter o fluxograma para Java (4 operações) |
+| `av1/Desafio2AreaTriangulo.java` | 2 — área do triângulo `b * h / 2` |
+| `av1/Desafio3DiaSemana.java` | 3 — dia da semana com `switch case` (1 = domingo … 7 = sábado) |
+| `av1/Desafio4Soma15.java` | 4 — ler 15 números e somar |
+
 ### Matrizes
 
 | Arquivo | Descrição |
