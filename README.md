@@ -26,17 +26,54 @@ além do `java.util.Scanner`.
 | `rascunho/Teste.java` | Hello World com uma piada no `println` |
 | `rascunho/Teste2.java` | Idem, segundo rascunho |
 
+### Matrizes
+
+| Arquivo | Descrição |
+|---|---|
+| `matrizes/ExemploMatriz.java` | Matriz 3x3 preenchida na mão, item a item |
+| `matrizes/MatrizCincoCinco.java` | Matriz 5x5 |
+| `matrizes/MatrizOitoPreco.java` | Matriz 8x8 de `double` |
+| `matrizes/MatrizRandomica.java` | Matriz 3x3 preenchida com `Math.random()` |
+
+### POO
+
+| Arquivo | Descrição |
+|---|---|
+| `poo/Pessoa.java` | Classe com 4 atributos e getter/setter de cada um |
+| `poo/POO_first.java` | `main` vazio, ponto de partida da aula |
+| `poo/aula_01_10/Animal.java` | Interface com `dormir`, `caminhar`, `correr`, `emitirSom` |
+| `poo/aula_01_10/Lobo.java` | Classe vazia pra implementar a interface |
+
 ## Como rodar
 
 ```ksh
-# compilar tudo
+# compilar tudo (o pacote aula_01_10 sai em out/aula_01_10/)
 javac -d out $(find . -name '*.java')
 
 # rodar um exemplo
 java -cp out NomeIdade
+java -cp out MatrizRandomica
 ```
 
 `out/` e os `*.class` já estão no `.gitignore` — bytecode não entra no git.
+
+## Dialeto que o professor usa
+
+Os arquivos da aula seguem um estilo mais antigo que o "padrão moderno", e vale
+copiar. Exemplos que aparecem nos exercícios:
+
+```java
+int [][] matriz = new int[5][5];           // espaço entre o tipo e o colchete
+public static void main (String[] args) { // espaço antes do parêntese
+public class MatrizCincoCinco {           // chave na mesma linha da declaração
+```
+
+Ou seja: sem `var`, tipo explícito sempre, `new int[n][m]` em vez de
+`{...}`, `Scanner` em vez de `BufferedReader`, e indentação com **tab**. Os
+exercícios da aula usam quase só `println`/`print` com concatenação
+(`matriz[i][j] + " "`) em vez de `printf` ou `text blocks`. Quando for reescrever
+qualquer coisa para entregar, seguir esse dialeto evita o tipo de comentário que
+o professor faz sobre recurso que ele não ensinou.
 
 ## Git e GitHub
 
