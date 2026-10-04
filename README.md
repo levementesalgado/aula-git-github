@@ -82,12 +82,43 @@ Lista FPOO de estrutura de decisão + `switch case` e ternário da Aula 11.
 | `matrizes/MatrizOitoPreco.java` | Matriz 8x8 de `double` |
 | `matrizes/MatrizRandomica.java` | Matriz 3x3 preenchida com `Math.random()` |
 
-### POO
+### POO — Aula 16 (introdução)
 
 | Arquivo | Descrição |
 |---|---|
-| `poo/Pessoa.java` | Classe com 4 atributos e getter/setter de cada um |
+| `poo/Pessoa.java` | Classe com nome, idade, endereço, profissão, **cpf e rg** + getter/setter |
 | `poo/POO_first.java` | `main` vazio, ponto de partida da aula |
+| `poo/Carro.java` | 4 atributos e 4 métodos (`ligar`, `acelerar`, `frear`, `parar`) |
+| `poo/Aviao.java` | 4 atributos e 4 métodos (`ligar`, `decolar`, `acelerar`, `pousar`) |
+| `poo/Animal.java` | 4 atributos e 4 métodos (`comer`, `dormir`, `andar`, `emitirSom`) |
+| `poo/Cliente.java` | Diagrama da aula: `id`, `nome`, `telefone`, `cpf`, `rg` |
+| `poo/ObjetosAula16.java` | Classe principal: cria os objetos e apresenta via `get()` |
+
+### POO — Aula 17 (interface, classe abstrata, enum)
+
+| Arquivo | Descrição |
+|---|---|
+| `poo/veiculo/Veiculo.java` | Interface com `ligar`, `desligar`, `manobrar`, `engatar`, `acelerar`, `frear` |
+| `poo/veiculo/Ferrari.java` | Subclasse implementando a interface |
+| `poo/veiculo/ObjetosVeiculo.java` | Classe principal: 2 objetos |
+| `poo/computador/Computador.java` | Interface com 4 métodos |
+| `poo/computador/Gamer.java`, `Home.java` | Subclasses implementando a interface |
+| `poo/computador/ObjetosComputador.java` | Classe principal: 2 objetos |
+| `poo/calculos/Calculos.java` | Interface `somar`, `sub`, `mult`, `div`, `exp` |
+| `poo/calculos/Calculando.java` | Subclasse implementando a interface |
+| `poo/calculos/ObjetosCalculos.java` | Classe principal: apresenta os resultados |
+| `poo/classeabstrata/Animal.java` | **Classe abstrata** com `nome`, `sexo`, `raca` + getters/setters |
+| `poo/classeabstrata/Lobo.java`, `Leao.java`, `Tigre.java`, `Cachorro.java`, `Gato.java` | 5 subclasses com `emitirSom()` |
+| `poo/classeabstrata/ObjetosAnimal.java` | Classe principal: os 5 objetos |
+| `poo/enums/Roupa.java` | Enum com 7 marcas de roupa |
+| `poo/enums/PrincipalRoupa.java` | Atribui e mostra todas as marcas |
+| `poo/enums/MarcaCarro.java` | Enum com 10 marcas de carro |
+| `poo/enums/PrincipalCarro.java` | Atribui e mostra todas as marcas |
+
+### Interfaces antigas (primeira atividade)
+
+| Arquivo | Descrição |
+|---|---|
 | `poo/aula_01_10/Animal.java` | Interface com `dormir`, `caminhar`, `correr`, `emitirSom` |
 | `poo/aula_01_10/Lobo.java` | Classe vazia pra implementar a interface |
 
@@ -100,6 +131,8 @@ javac -d out $(find . -name '*.java')
 # rodar um exemplo
 java -cp out NomeIdade
 java -cp out MatrizRandomica
+java -cp out ObjetosAula16
+java -cp out classeabstrata.ObjetosAnimal   # classe de pacote
 ```
 
 `out/` e os `*.class` já estão no `.gitignore` — bytecode não entra no git.

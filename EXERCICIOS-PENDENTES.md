@@ -32,22 +32,25 @@ mesma ordem que as aulas.
 | Vetores: 5 nomes, soma > 15, junção A+B | `vetores/` | 13 |
 | Matrizes 3x3, 5x5, 8x8, aleatória | `matrizes/` | *(extra)* |
 | POO: classe, getters/setters, interface | `poo/` | 16–17 (parcial) |
+| POO Aula 16: `Pessoa` com CPF/RG, `Carro`, `Avião`, `Animal`, `Cliente` | `poo/` | 16 |
+| POO Aula 17: 3 interfaces, classe abstrata com 5 subclasses, 2 enums | `poo/veiculo/`, `poo/computador/`, `poo/calculos/`, `poo/classeabstrata/`, `poo/enums/` | 17 |
 | Simulado AV1 — os 4 desafios | `av1/` | AV1 |
 | Git e GitHub | `README.md` | 15 |
 
 ## O que falta
 
-### 1. POO — o que sobrou das Aulas 16 e 17
+### 1. POO — só o que é desenho, não código
 
-| Onde | Pendência |
-|---|---|
-| Aula 16 (p. 27) | `Pessoa`: adicionar **CPF e RG** (com getter/setter) — o repo tem só 4 atributos |
-| Aula 16 (p. 28–39) | Classes `Carro`, `Avião`, `Animal` + as classes dos diagramas das imagens |
-| Aula 17 (p. 32–35) | 3 exercícios de **interface** a partir de diagrama (o repo tem `Animal`/`Lobo`, mas `Lobo` está vazio e não implementa a interface) |
-| Aula 17 (p. 49) | Transformar `Animal` em **classe abstrata** e fazer getters/setters |
-| Aula 17 (p. 61) | 2 exercícios de **`enum`**: 7 marcas de roupa e 10 marcas de carro |
+Tudo que era código das Aulas 16 e 17 está feito. O que sobrou é a parte em
+que o professor pede pra **"criar a classe de acordo com a imagem e indicar os
+atributos e métodos"** — são fotos (p. 35 a 39 da Aula 16: cadeira de escritório
+e objetos similares) e a resposta é escrita, não arquivo `.java`. O padrão é o
+mesmo de `Carro`/`Avião`/`Animal`, então se ele aceitar código, é copiar e
+mudar os 4 atributos.
 
-`poo/` tem interface, mas nada de `abstract`, nada de herança, nada de `enum`.
+A interface `poo/aula_01_10/Animal.java` continua com `Lobo` vazio (não
+implementa a interface) — era a atividade anterior e não aparece de novo nas
+Aulas 16/17, mas é 2 linhas de trabalho se quiser fechar.
 
 ### 2. Atividades Aulas 04/05 — fluxograma e Portugol
 
